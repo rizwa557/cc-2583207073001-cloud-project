@@ -1,0 +1,21 @@
+● cc-m03.service - PTI 2802 M03 Flask Application
+     Loaded: loaded (/etc/systemd/system/cc-m03.service; enabled; preset: enabled)
+     Active: active (running) since Sun 2026-11-08 19:19:08 WIB; 23min ago
+   Main PID: 729 (gunicorn)
+      Tasks: 3 (limit: 472)
+     Memory: 35.7M (peak: 36.2M)
+        CPU: 490ms
+     CGroup: /system.slice/cc-m03.service
+             ├─729 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+             └─926 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+
+Nov 08 19:19:10 cc-m03-2583207073001 gunicorn[729]: [2026-11-08 19:19:10 +0700] [729] [INFO] Using worker: gthread
+Nov 08 19:19:10 cc-m03-2583207073001 gunicorn[926]: [2026-11-08 19:19:10 +0700] [926] [INFO] Booting worker with pid: 926
+Nov 08 19:19:10 cc-m03-2583207073001 gunicorn[729]: [2026-11-08 19:19:10 +0700] [729] [ERROR] Control server error: [Errno 13] Permission denied: '/home/cloudstudent'
+Nov 08 19:19:10 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:19:10 +0700] "GET / HTTP/1.1" 200 784 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+Nov 08 19:19:10 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:19:10 +0700] "GET /static/style.css HTTP/1.1" 304 0 "http://4.217.184.141/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0"
+Nov 08 19:21:19 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:21:19 +0700] "GET / HTTP/1.1" 200 784 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+Nov 08 19:34:19 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:34:19 +0700] "GET /robots.txt HTTP/1.1" 404 207 "-" "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36"
+Nov 08 19:34:28 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:34:28 +0700] "GET / HTTP/1.1" 200 784 "-" "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36"
+Nov 08 19:34:30 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:34:30 +0700] "GET /static/style.css HTTP/1.1" 200 0 "http://4.217.184.141/" "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/136.0.0.0 Safari/537.36 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36"
+Nov 08 19:34:38 cc-m03-2583207073001 gunicorn[926]: 127.0.0.1 - - [08/Nov/2026:19:34:38 +0700] "GET /health HTTP/1.1" 200 91 "-" "curl/8.5.0"
