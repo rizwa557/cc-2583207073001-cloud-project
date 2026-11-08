@@ -1,0 +1,14 @@
+ Static hostname: cc-m03-2583207073001
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: dc8e0b41e2e34332967ea510b80d112a
+         Boot ID: ef2cee503caa457898f7d6022756a301
+  Virtualization: microsoft
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 7.0.0-1017-azure
+    Architecture: x86-64
+ Hardware Vendor: Microsoft Corporation
+  Hardware Model: Virtual Machine
+Firmware Version: Hyper-V UEFI Release v4.1
+   Firmware Date: Wed 2026-04-22
+    Firmware Age: 6month 2w 4d
